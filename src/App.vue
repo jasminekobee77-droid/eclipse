@@ -1,6 +1,7 @@
 
 <script setup>
 import Header from './components/Header.vue'
+import FeaturedArticle from './components/FeaturedArticle.vue'
 </script>
 
 <template>
@@ -14,22 +15,16 @@ import Header from './components/Header.vue'
       culture and lifestyle.
     </p>
 
-    <button>Explore Articles</button>
+    <FeaturedArticle />
   </main>
 </template>
 
 <style scoped>
     main {
       text-align: center;
-      padding: 60px 20px;
-    }
-
-    button {
-      background-color: black;
-      color: white;
-      padding: 12px 20px;
-      border: none;
+      padding: 40px 20px;
     }
 </style>
+
 
 
