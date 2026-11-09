@@ -1,19 +1,12 @@
-<script setup>
 
+<script setup>
+import Header from './components/Header.vue'
 </script>
 
 <template>
-  <div>
-    <h1>ECLIPSE</h1>
+  <Header />
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Fashion</a>
-      <a href="#">Beauty</a>
-      <a href="#">Culture</a>
-      <a href="#">Lifestyle</a>
-    </nav>
-
+  <main>
     <h2>Welcome to ECLIPSE</h2>
 
     <p>
@@ -22,23 +15,13 @@
     </p>
 
     <button>Explore Articles</button>
-  </div>
+  </main>
 </template>
 
 <style scoped>
-    h1 {
-      font-family: Georgia, serif;
-      font-size: 40px;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
+    main {
+      text-align: center;
+      padding: 60px 20px;
     }
 
     button {
@@ -48,4 +31,5 @@
       border: none;
     }
 </style>
+
 
