@@ -25,7 +25,7 @@
       display: flex;
       align-items: center;
       gap: 40px;
-      background-color: #f5f5f5;
+      background-color: #d9d9d9;
       padding: 60px;
       text-align: center;
     }
@@ -45,6 +45,7 @@
 
     .featured-text {
       width: 40%;
+      text-align: left;
     }
 
     .featured-image {

@@ -5,6 +5,6 @@ import HomeView from './components/HomeView.vue'
 
 <template>
   <Header />
-  <HomeView />
+  <RouterView />
 </template>
 

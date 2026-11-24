@@ -1,41 +1,56 @@
 <script setup>
-defineProps(['title', 'category', 'description'])
+defineProps(['id','title', 'category', 'description'])
 </script>
 
 <template>
   <div class="card">
+    <div class="article-image">Image</div>
     <p class="category">{{ category }}</p>
 
     <h3>{{ title }}</h3>
 
     <p>{{ description }}</p>
 
-    <button>Read Article</button>
+    <RouterLink class="read-button" :to="{ name: 'article-detail', params: { id: id } }">
+      Read Article
+    </RouterLink>
+
   </div>
 </template>
 
 <style scoped>
-    .card {
-      background-color: #f5f5f5;
-      padding: 25px;
-      border: 1px solid #ddd;
-    }
+      .card {
+        background-color: white;
+        text-align: left;
+      }
 
-    .category {
-      font-weight: bold;
-      font-size: 12px;
-    }
+      .category {
+        background-color: #e5e5e5;
+        border-radius: 15px;
+        padding: 4px 12px;
+        font-size: 12px;
+        display: inline-block;
+      }
 
-    h3 {
-      font-family: Georgia, serif;
-      font-size: 24px;
-    }
+      h3 {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        margin: 5px 0;
+      }
 
-    button {
-      background-color: black;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      cursor: pointer;
-    }
+      .read-button {
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .article-image {
+        background-color: #e5e5e5;
+        height: 180px;
+        text-align: center;
+      }
 </style>
