@@ -5,34 +5,33 @@ import ArticleCard from '../components/ArticleCard.vue'
 const articles = [
   {
     id: 1,
-    title: 'Capsule Wardrobe Essentials',
+    title: 'Street Style: Looks We Love',
     category: 'Fashion',
     description: 'Key pieces to build a timeless wardrobe.'
   },
   {
     id: 2,
-    title: 'Everyday Makeup Routine',
+    title: 'The Glow Guide',
     category: 'Beauty',
     description: 'A simple and natural look for any day.'
   },
   {
     id: 3,
-    title: 'Fashion Around the World',
+    title: 'Fashion & Identity',
     category: 'Culture',
     description: 'How different cultures shape today’s style.'
+  },
+  {
+    id: 4,
+    title: 'A More Stylish Routine',
+    category: 'Lifestyle',
+    description: 'Easy lifestyle habits for a balanced, stylish life.'
   }
 ]
 </script>
 
 <template>
   <main>
-    <h2>Welcome to ECLIPSE</h2>
-
-    <p>
-      Discover the latest in fashion, beauty,
-      culture and lifestyle.
-    </p>
-
     <FeaturedArticle />
 
     <h2>Latest Articles</h2>
@@ -51,21 +50,17 @@ const articles = [
 
 <style scoped>
     main {
-      padding: 40px 20px;
+      padding: 0;
     }
 
     h2 {
-      text-align: center;
+      text-align: left;
       margin: 30px 0;
-    }
-
-    main > p {
-      text-align: center;
     }
 
     .articles {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       margin-top: 30px;
     }
