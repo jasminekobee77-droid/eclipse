@@ -53,4 +53,29 @@ defineProps(['id','title', 'category', 'description'])
         height: 180px;
         text-align: center;
       }
+
+      .horizontal-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        align-items: start;
+      }
+
+      .horizontal-card .article-image {
+        grid-column: 1;
+        grid-row: 1 / 5;
+        height: 180px;
+      }
+
+      .horizontal-card .category,
+      .horizontal-card h3,
+      .horizontal-card p,
+      .horizontal-card .read-button {
+        grid-column: 2;
+        margin: 5px 0;
+      }
+
+      .horizontal-card .read-button {
+        text-align: center;
+      }
 </style>

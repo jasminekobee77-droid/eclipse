@@ -15,7 +15,9 @@
     </nav>
 
     <div class="header-buttons">
-      <button>🔍</button>
+      <RouterLink to="/search" aria-label="Search articles">
+        🔍
+      </RouterLink>
       <RouterLink to="/admin">Admin</RouterLink>
     </div>
 
