@@ -16,7 +16,7 @@
 
     <div class="header-buttons">
       <button>🔍</button>
-      <button>Admin</button>
+      <RouterLink to="/admin">Admin</RouterLink>
     </div>
 
   </header>
