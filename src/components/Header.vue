@@ -7,11 +7,11 @@
     </div>
 
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Fashion</a>
-      <a href="#">Beauty</a>
-      <a href="#">Culture</a>
-      <a href="#">Lifestyle</a>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/search?category=Fashion">Fashion</RouterLink>
+      <RouterLink to="/search?category=Beauty">Beauty</RouterLink>
+      <RouterLink to="/search?category=Culture">Culture</RouterLink>
+      <RouterLink to="/search?category=Lifestyle">Lifestyle</RouterLink>
     </nav>
 
     <div class="header-buttons">

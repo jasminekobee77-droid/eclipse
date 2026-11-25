@@ -9,8 +9,9 @@
     <p>
       A look at the styles, colors and pieces defining fashion right now.
     </p>
-
-    <button>Read Article →</button>
+      <RouterLink to="/articles/1" class="featured-button">
+        Read Article →
+      </RouterLink>
     </div>
 
     <div class="featured-image">
@@ -35,12 +36,14 @@
       font-size: 50px;
     }
 
-    button {
+    .featured-button {
       background-color: black;
       color: white;
       padding: 12px 20px;
       border: none;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .featured-text {

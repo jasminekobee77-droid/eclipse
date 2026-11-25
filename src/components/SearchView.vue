@@ -1,12 +1,17 @@
 <script setup>
 import ArticleCard from '../components/ArticleCard.vue'
 import { useArticles } from '../stores/articlesStore.js'
+import { useRoute } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const { articles } = useArticles()
 
 const searchQuery = ref('')
-const selectedCategory = ref('')
+const route = useRoute()
+
+const selectedCategory = computed(() =>
+    route.query.category || ''
+)
 
 const categories = ['Fashion', 'Beauty', 'Culture', 'Lifestyle']
 
@@ -44,17 +49,17 @@ const filteredArticles = computed(() => {
 
       <div class="category-buttons">
 
-        <button @click="selectedCategory = ''"
-                :class="{ active: selectedCategory === '' }">
+        <RouterLink to="/search"
+                    :class="{ active: selectedCategory === '' }">
           All
-        </button>
+        </RouterLink>
 
-        <button v-for="category in categories"
-                :key="category"
-                @click="selectedCategory = category"
-                :class="{ active: selectedCategory === category }">
+        <RouterLink v-for="category in categories"
+                    :key="category"
+                    :to="'/search?category=' + category"
+                    :class="{ active: selectedCategory === category }">
           {{ category }}
-        </button>
+        </RouterLink>
 
       </div>
     </div>
@@ -119,20 +124,21 @@ const filteredArticles = computed(() => {
       margin-top: 20px;
     }
 
-    .category-buttons button {
+    .category-buttons a {
       background-color: #f5f5f5;
       color: black;
       border: 1px solid #999999;
       border-radius: 5px;
       padding: 8px 18px;
       cursor: pointer;
+      text-decoration: none;
     }
 
-    .category-buttons button:hover {
+    .category-buttons a:hover {
       background-color: #dddddd;
     }
 
-    .category-buttons button.active {
+    .category-buttons a.active {
       background-color: #555555;
       color: white;
     }
